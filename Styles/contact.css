@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.logo {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-left: 20%;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+}
+.topnav a {
+  color: #333;
+  text-align: center;
+  padding: 20px 0px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  transition: color 0.3s;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+.topnav a:hover, .topnav a.active {
+  color: #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+}
+.topnav .icon {
+  display: none;
+  font-size: 24px;
+}
+.topnav .menu {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 740px) {
+  .topnav .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .topnav.responsive .menu {
+    display: flex;
+    z-index: 10;
+  }
+  .topnav.responsive .menu a {
+    border-bottom: 0px;
+  }
+  .topnav .icon {
+    display: flex;
+  }
+}
+
+.portfolio-header {
+  text-align: center;
+  margin: 0 20% 70px;
+}
+.portfolio-header h5 {
+  margin-top: 50px;
+  color: #a5aaaa;
+  letter-spacing: 0.3em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.portfolio-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.portfolio-header::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #e74c3c;
+  margin: 10px auto 0;
+}
+
+.rectangle {
+  width: 300px;
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.rectangle .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff5c5c;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rectangle .circle img {
+  width: 30px;
+  height: 30px;
+}
+.rectangle .circle-big {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f9dbdf;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rectangle p {
+  text-decoration: underline;
+  color: #a5aaaa;
+}
+.rectangle span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content {
+  margin: 0 20% 30px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content h3 {
+  margin-bottom: 50px;
+}
+
+.contact-form {
+  margin: 0 20%;
+}
+.contact-form .personal-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.contact-form .personal-info input {
+  width: 45%;
+  height: 30px;
+  margin: 0 4px;
+}
+.contact-form .message {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form .message input,
+.contact-form .message textarea {
+  margin-bottom: 10px;
+  width: 98%;
+  resize: none;
+}
+
+/*# sourceMappingURL=contact.css.map */
