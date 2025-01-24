@@ -21,6 +21,7 @@ body {
 }
 
 .topnav {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,11 +29,13 @@ body {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   height: 40px;
+  padding-right: 7%;
+
 
   a {
     color: #333;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px 20px;
     text-decoration: none;
     font-size: 17px;
     position: relative;
@@ -57,9 +60,13 @@ body {
   .menu {
     display: flex;
     gap: 10px;
+    :last-child{
+    a {
+      margin-right: 20%;
+    }}
   }
 
-  @media screen and (max-width: 740px) {
+  @media screen and (max-width: 886px) {
     .menu {
       display: none;
       flex-direction: column;
@@ -125,6 +132,8 @@ body {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  border-radius: 1px;
+  border: 1px solid rgba(165, 170, 170, 0.2);
 
   .circle {
     width: 50px;
@@ -132,7 +141,7 @@ body {
     border-radius: 50%;
     background-color: #ff5c5c;
     position: absolute;
-    top: -15px;
+    top: -25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -149,9 +158,9 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #f9dbdf;
+    background-color: rgba(255, 92, 92, 0.3);
     position: absolute;
-    top: -25px;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -187,11 +196,28 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin: 0 5px 20px;
+
 
     input {
       width: 45%;
-      height: 30px;
-      margin: 0 4px;
+      height: 40px;
+      border: 1px solid $secondary-color;
+      outline: none;
+      padding: 0 20px;
+      font-family: $font-family;
+      font-size: 14px;
+      color: #333;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+      }
+
+      &::placeholder {
+        color: $secondary-color;
+      }
     }
   }
 
@@ -200,12 +226,93 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 4px 0px 4px;
+
 
     input,
     textarea {
-      margin-bottom: 10px;
-      width: 98%;
+
+      border: 1px solid $secondary-color;
+      padding: 10px 18px 0 18px;
+      margin: 0 4px 20px;
+      width: calc(100% - 40px);
+      font-family: $font-family;
+      font-size: 14px;
+      color: #333;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      height: 150px;
       resize: none;
+
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+      }
+
+      &::placeholder {
+        color: $secondary-color;
+      }
+
+
+
+
+
     }
+    input{
+      padding-top: 0px;
+      height: 40px;
+    }
+  }
+  button {
+    position: relative;
+    background-color: $primary-color;
+    border: none;
+
+    color: #FFFFFF;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    letter-spacing: 0.1em;
+
+    &:after {
+      content: "";
+      background: rgba(255, 192, 92, 1);
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -60px !important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.8s;
+    }
+
+    &:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s;
+    }
+  }
+
+}
+
+@font-face {
+  font-family: 'Font1';
+  font-weight: 1000;
+  src: url(/Fonts/font.otf) format('otf');
+}
+.urosVelickovic{
+  margin-left: calc(20% + 5px) ;
+  margin-bottom: 20px;
+  font-family: "Font1";
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  p{
+    margin-bottom: 60px;
   }
 }
