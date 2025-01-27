@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
 }
 
 .logo {
@@ -17,24 +18,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  height: 40px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  height: 40px;
+  padding-right: 7%;
 }
 .topnav a {
   color: #333;
   text-align: center;
-  padding: 20px 0px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 17px;
   position: relative;
+  padding: 20px 20px;
   transition: color 0.3s;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
 }
 .topnav a:hover, .topnav a.active {
-  color: #e74c3c;
-  border-bottom: 2px solid #e74c3c;
+  color: #FF5868;
+  border-bottom: 2px solid #FF5868;
 }
 .topnav .icon {
   display: none;
@@ -44,7 +47,10 @@ body {
   display: flex;
   gap: 10px;
 }
-@media screen and (max-width: 740px) {
+.topnav .menu :last-child a {
+  margin-right: 20%;
+}
+@media screen and (max-width: 886px) {
   .topnav .menu {
     display: none;
     flex-direction: column;
@@ -84,6 +90,7 @@ body {
   color: #a5aaaa;
   letter-spacing: 0.3em;
   font-size: 0.8em;
+  text-transform: uppercase;
 }
 .portfolio-header h1 {
   font-size: 36px;
@@ -99,13 +106,38 @@ body {
   background-color: #e74c3c;
   margin: 10px auto 0;
 }
-.portfolio-header nav {
+
+.arrow {
+  position: fixed;
+  bottom: -7px;
+  right: 5px;
+  transform: translateY(-60%);
+  height: 50px;
+  width: 50px;
+  background-color: #FF5868;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 16px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+nav {
   margin-top: 75px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.portfolio-header nav a {
+nav a {
   text-decoration: none;
   font-size: 18px;
   color: #333;
@@ -113,7 +145,7 @@ body {
   border-bottom: 2px solid white;
   transition: all 0.3s;
 }
-.portfolio-header nav a.active, .portfolio-header nav a:hover {
+nav a.active, nav a:hover {
   color: #e74c3c;
   border-color: #e74c3c;
 }

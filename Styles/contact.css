@@ -30,13 +30,14 @@ body {
   text-decoration: none;
   font-size: 17px;
   position: relative;
+  padding: 20px 20px;
   transition: color 0.3s;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
 }
 .topnav a:hover, .topnav a.active {
-  color: #e74c3c;
-  border-bottom: 2px solid #e74c3c;
+  color: #FF5868;
+  border-bottom: 2px solid #FF5868;
 }
 .topnav .icon {
   display: none;
@@ -75,7 +76,14 @@ body {
 
 .portfolio-header {
   text-align: center;
-  margin: 0 20% 70px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.portfolio-header .line-wrapper {
+  width: 61%;
+  min-width: 333px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
 }
 .portfolio-header h5 {
   margin-top: 50px;
@@ -90,13 +98,33 @@ body {
   position: relative;
   display: inline-block;
 }
-.portfolio-header::after {
+.portfolio-header h1::after {
   content: "";
   display: block;
   width: 40px;
   height: 4px;
   background-color: #e74c3c;
   margin: 10px auto 0;
+}
+
+.arrow {
+  position: fixed;
+  bottom: -7px;
+  right: 5px;
+  transform: translateY(-60%);
+  height: 50px;
+  width: 50px;
+  background-color: #FF5868;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 16px;
 }
 
 .rectangle {
@@ -181,7 +209,7 @@ body {
   transition: all 0.3s ease;
 }
 .contact-form .personal-info input:focus {
-  border-color: #e74c3c;
+  border-color: #FF5868;
   box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
 }
 .contact-form .personal-info input::placeholder {
@@ -210,7 +238,7 @@ body {
 }
 .contact-form .message input:focus,
 .contact-form .message textarea:focus {
-  border-color: #e74c3c;
+  border-color: #FF5868;
   box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
 }
 .contact-form .message input::placeholder,
@@ -223,7 +251,7 @@ body {
 }
 .contact-form button {
   position: relative;
-  background-color: #e74c3c;
+  background-color: #FF5868;
   border: none;
   color: #FFFFFF;
   padding: 20px 60px;
@@ -256,7 +284,7 @@ body {
 @font-face {
   font-family: "Font1";
   font-weight: 1000;
-  src: url(/Fonts/font.otf) format("otf");
+  src: url(/Fonts/Dinot.otf) format("opentype");
 }
 .urosVelickovic {
   margin-left: calc(20% + 5px);
@@ -267,6 +295,7 @@ body {
 }
 .urosVelickovic p {
   margin-bottom: 60px;
+  font-family: "Font1";
 }
 
 /*# sourceMappingURL=contact.css.map */
