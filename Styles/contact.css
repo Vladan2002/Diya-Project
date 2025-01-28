@@ -30,7 +30,6 @@ body {
   text-decoration: none;
   font-size: 17px;
   position: relative;
-  padding: 20px 20px;
   transition: color 0.3s;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
@@ -38,6 +37,11 @@ body {
 .topnav a:hover, .topnav a.active {
   color: #FF5868;
   border-bottom: 2px solid #FF5868;
+}
+.topnav a.icon {
+  border-bottom: none;
+  padding: 0;
+  margin: 20px;
 }
 .topnav .icon {
   display: none;
@@ -47,27 +51,24 @@ body {
   display: flex;
   gap: 10px;
 }
-.topnav .menu :last-child a {
-  margin-right: 20%;
-}
 @media screen and (max-width: 886px) {
   .topnav .menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
     right: 0;
+    top: 50px;
     width: 100%;
     background-color: #fff;
     border-top: 1px solid #ddd;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .topnav.responsive .menu {
     display: flex;
     z-index: 10;
   }
   .topnav.responsive .menu a {
-    border-bottom: 0px;
+    border-bottom: 0;
   }
   .topnav .icon {
     display: flex;
@@ -78,12 +79,6 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 0 20px;
-}
-.portfolio-header .line-wrapper {
-  width: 61%;
-  min-width: 333px;
-  border-bottom: 1px solid #ddd;
-  margin: 0 auto;
 }
 .portfolio-header h5 {
   margin-top: 50px;
@@ -97,6 +92,7 @@ body {
   margin-bottom: 10px;
   position: relative;
   display: inline-block;
+  margin-top: 5px;
 }
 .portfolio-header h1::after {
   content: "";
@@ -193,7 +189,6 @@ body {
 .contact-form .personal-info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
   margin: 0 5px 20px;
 }
 .contact-form .personal-info input {
@@ -215,25 +210,35 @@ body {
 .contact-form .personal-info input::placeholder {
   color: #a5aaaa;
 }
+@media screen and (max-width: 800px) {
+  .contact-form .personal-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-form .personal-info input {
+    width: calc(100% - 42px);
+    margin: 20px 4px 0;
+  }
+}
 .contact-form .message {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 4px 0px 4px;
+  margin: 20px 4px 0 4px;
 }
 .contact-form .message input,
 .contact-form .message textarea {
-  border: 1px solid #a5aaaa;
-  padding: 10px 18px 0 18px;
-  margin: 0 4px 20px;
   width: calc(100% - 40px);
+  height: 150px;
+  border: 1px solid #a5aaaa;
+  outline: none;
+  margin: 0 4px 20px;
+  padding: 10px 18px 0 18px;
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
   background-color: #fff;
   transition: all 0.3s ease;
-  height: 150px;
   resize: none;
 }
 .contact-form .message input:focus,
@@ -246,7 +251,7 @@ body {
   color: #a5aaaa;
 }
 .contact-form .message input {
-  padding-top: 0px;
+  padding-top: 0;
   height: 40px;
 }
 .contact-form button {

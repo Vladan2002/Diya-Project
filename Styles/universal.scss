@@ -31,7 +31,6 @@ body {
   height: 40px;
   padding-right: 7%;
 
-
   a {
     color: #333;
     text-align: center;
@@ -39,7 +38,6 @@ body {
     text-decoration: none;
     font-size: 17px;
     position: relative;
-    padding: 20px 20px;
     transition: color 0.3s;
     font-family: $font-family;
     text-transform: uppercase;
@@ -51,6 +49,13 @@ body {
       border-bottom: 2px solid $primary-color;
 
     }
+
+    &.icon {
+      border-bottom: none;
+      padding: 0;
+      margin:20px;
+    }
+
   }
 
   .icon {
@@ -61,10 +66,7 @@ body {
   .menu {
     display: flex;
     gap: 10px;
-    :last-child{
-      a {
-        margin-right: 20%;
-      }}
+
   }
 
   @media screen and (max-width: 886px) {
@@ -72,12 +74,12 @@ body {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 50px;
       right: 0;
+      top: 50px;
       width: 100%;
       background-color: #fff;
       border-top: 1px solid #ddd;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     &.responsive .menu {
@@ -85,12 +87,13 @@ body {
       z-index: 10;
 
       a{
-        border-bottom:0px;
+        border-bottom:0;
       }
     }
 
     .icon {
       display: flex;
+
     }
   }
 }
@@ -102,13 +105,7 @@ body {
   padding: 0 20px;
 
 
-  .line-wrapper {
-    width: 61%;
-    min-width: 333px;
-    border-bottom: 1px solid #ddd;
-    margin: 0 auto;
 
-  }
 
   h5 {
     margin-top: 50px;
@@ -123,6 +120,7 @@ body {
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+    margin-top: 5px;
 
     &::after {
       content: "";

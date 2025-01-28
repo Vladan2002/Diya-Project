@@ -24,6 +24,14 @@ body{
     }
   }
 
+.line-wrapper {
+  width: 61%;
+  min-width: 338px;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+
+}
+
 
 .image-gallery {
   display: flex;

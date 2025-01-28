@@ -71,9 +71,7 @@
   .personal-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
     margin: 0 5px 20px;
-
 
     input {
       width: 45%;
@@ -86,6 +84,7 @@
       color: #333;
       background-color: #fff;
       transition: all 0.3s ease;
+
       &:focus {
         border-color: $primary-color;
         box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
@@ -97,28 +96,40 @@
     }
   }
 
+  @media screen and (max-width: 800px) {
+    .personal-info {
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        width: calc(100% - 42px);
+        margin: 20px 4px 0;
+
+      }
+    }}
   .message {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 4px 0px 4px;
+    margin: 20px 4px 0 4px;
 
 
     input,
     textarea {
 
-      border: 1px solid $secondary-color;
-      padding: 10px 18px 0 18px;
-      margin: 0 4px 20px;
       width: calc(100% - 40px);
+      height: 150px;
+      border: 1px solid $secondary-color;
+      outline: none;
+      margin: 0 4px 20px;
+      padding: 10px 18px 0 18px;
       font-family: $font-family;
       font-size: 14px;
       color: #333;
       background-color: #fff;
       transition: all 0.3s ease;
-      height: 150px;
       resize: none;
+
 
 
       &:focus {
@@ -131,10 +142,12 @@
       }
     }
     input{
-      padding-top: 0px;
+      padding-top: 0;
       height: 40px;
     }
   }
+
+
   button {
     position: relative;
     background-color: $primary-color;
@@ -184,6 +197,7 @@
   font-family: "Font1";
   font-weight: bold;
   letter-spacing: 0.1em;
+
   p{
     margin-bottom: 60px;
     font-family: 'Font1';
