@@ -13,7 +13,7 @@ body {
 
 .logo {
   font-family: $font-family-alt;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 25px 20px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   height: 40px;
@@ -34,7 +34,7 @@ body {
   a {
     color: #333;
     text-align: center;
-    padding: 20px 20px;
+    padding: 34px 20px;
     text-decoration: none;
     font-size: 17px;
     position: relative;
@@ -46,7 +46,7 @@ body {
     &:hover,
     &.active {
       color: $primary-color;
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 3px solid $primary-color;
 
     }
 
@@ -75,7 +75,7 @@ body {
       flex-direction: column;
       position: absolute;
       right: 0;
-      top: 50px;
+      top: 90px;
       width: 100%;
       background-color: #fff;
       border-top: 1px solid #ddd;

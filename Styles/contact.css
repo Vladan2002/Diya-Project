@@ -6,7 +6,7 @@ body {
 
 .logo {
   font-family: Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 25px 20px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   height: 40px;
@@ -26,7 +26,7 @@ body {
 .topnav a {
   color: #333;
   text-align: center;
-  padding: 20px 20px;
+  padding: 34px 20px;
   text-decoration: none;
   font-size: 17px;
   position: relative;
@@ -36,7 +36,7 @@ body {
 }
 .topnav a:hover, .topnav a.active {
   color: #FF5868;
-  border-bottom: 2px solid #FF5868;
+  border-bottom: 3px solid #FF5868;
 }
 .topnav a.icon {
   border-bottom: none;
@@ -57,7 +57,7 @@ body {
     flex-direction: column;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 90px;
     width: 100%;
     background-color: #fff;
     border-top: 1px solid #ddd;
@@ -152,6 +152,9 @@ body {
   width: 30px;
   height: 30px;
 }
+.rectangle .circle .location {
+  transform: scale(1.5);
+}
 .rectangle .circle-big {
   width: 70px;
   height: 70px;
@@ -210,7 +213,7 @@ body {
 .contact-form .personal-info input::placeholder {
   color: #a5aaaa;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1450px) {
   .contact-form .personal-info {
     flex-direction: column;
     align-items: center;
@@ -291,14 +294,14 @@ body {
   font-weight: 1000;
   src: url(/Fonts/Dinot.otf) format("opentype");
 }
-.urosVelickovic {
+.page-text {
   margin-left: calc(20% + 5px);
   margin-bottom: 20px;
   font-family: "Font1";
   font-weight: bold;
   letter-spacing: 0.1em;
 }
-.urosVelickovic p {
+.page-text p {
   margin-bottom: 60px;
   font-family: "Font1";
 }
